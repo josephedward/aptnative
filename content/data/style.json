@@ -44,7 +44,7 @@
         "letterSpacing": "normal"
     },
     "light": "#ffffff",
-    "onLight": "#00f351",
+    "onLight": "#000000",
     "dark": "#000000",
     "onDark": "#FBFFF2",
     "primary": "#0804F6",
