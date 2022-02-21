@@ -2,9 +2,9 @@
     "type": "Config",
     "favicon": "/images/favicon.svg",
     "header": {
-        "headerVariant": "variant-c",
-        "isSticky": false,
-        "title": "Personal",
+        "headerVariant": "variant-a",
+        "isSticky": true,
+        "title": "APT Native",
         "isTitleVisible": true,
         "primaryLinks": [
             {
@@ -82,7 +82,6 @@
             "address": "312 Lovely Street, Brooklyn, NY, 123456",
             "addressAltText": "My address"
         },
-        "copyrightText": "Powered by [Stackbit](https://www.stackbit.com/)",
         "styles": {
             "self": {
                 "width": "narrow",
