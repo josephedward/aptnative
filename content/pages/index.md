@@ -16,10 +16,6 @@ sections:
     #   Apt Native
     # subtitle: >-
     #   Your one-stop-AWS-consulting-shop in 2022! 
-    media:
-      type: ImageBlock
-
-      altText: Hero image
     styles:
       self:
         height: auto

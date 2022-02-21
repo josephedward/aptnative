@@ -3,7 +3,7 @@ layout: ProjectFeedLayout
 title: Projects
 colors: colors-a
 backgroundImage:
-  url: /images/bg1.jpg
+  # url: /images/bg1.jpg
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
