@@ -206,19 +206,19 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: 'WEB 1, 2, 3'
+        label: 'WEB 3'
       - type: Label
         label: React
       - type: Label
-        label: Microsoft Office
+        label: AWS
       - type: Label
         label: Next.js
       - type: Label
         label: Stackbit
       - type: Label
-        label: Pancakes
+        label: Kale Shakes
       - type: Label
-        label: C++
+        label: Rust
       - type: Label
         label: Swift
   - type: DividerSection
@@ -298,6 +298,7 @@ sections:
           **2011**
 
           * my highschool
+          
         styles:
           self:
             textAlign: left

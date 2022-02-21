@@ -12,6 +12,7 @@ export default function Header(props) {
     const headerWidth = props.styles?.self?.width || 'narrow';
     return (
         <header
+            style={{opacity:1}}
             className={classNames('sb-component', 'sb-component-header', props.isSticky ? 'sticky top-0 z-10' : 'relative', 'border-b', 'border-current')}
             data-sb-field-path={`${props.annotationPrefix}:header`}
         >
@@ -47,7 +48,9 @@ function headerVariantA(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
     return (
-        <div className="flex items-stretch relative">
+        <div 
+        style={{opacity:1, backgroundColor:"darkslategrey"}}
+        className="flex items-stretch relative">
             {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
             {primaryLinks.length > 0 && (
                 <ul className="hidden lg:flex divide-x divide-current border-r border-current" data-sb-field-path=".primaryLinks">
@@ -68,7 +71,9 @@ function headerVariantB(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
     return (
-        <div className="flex items-stretch relative">
+        <div 
+        style={{opacity:1, backgroundColor:"darkslategrey"}}
+        className="flex items-stretch relative">
             {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
             {primaryLinks.length > 0 && (
                 <ul className="hidden lg:flex border-l border-current divide-x divide-current ml-auto" data-sb-field-path=".primaryLinks">
@@ -94,7 +99,9 @@ function headerVariantC(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
     return (
-        <div className="flex items-stretch relative">
+        <div 
+        style={{opacity:1, backgroundColor:"darkslategrey"}}
+        className="flex items-stretch relative">
             {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
             {socialLinks.length > 0 && (
                 <ul className="hidden lg:flex border-l border-current ml-auto" data-sb-field-path=".socialLinks">

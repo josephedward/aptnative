@@ -2,15 +2,15 @@
     "type": "Config",
     "favicon": "/images/favicon.svg",
     "header": {
-        "headerVariant": "variant-a",
+        "headerVariant": "variant-b",
         "isSticky": true,
         "title": "APT Native",
         "isTitleVisible": true,
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info"
+                "label": "About",
+                "url": "/about"
             },
             {
                 "type": "Link",

@@ -3,7 +3,8 @@ title: Home
 layout: PageLayout
 colors: colors-a
 backgroundImage:
-  backgroundSize: cover
+  url: /images/logo.svg
+  backgroundSize: stretch
   backgroundPosition: center
   backgroundRepeat: no-repeat
   opacity: 75
@@ -11,12 +12,14 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    title: >-
-      Test
-    subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+    # title: >-
+    #   Apt Native
+    # subtitle: >-
+    #   Your one-stop-AWS-consulting-shop in 2022! 
+    media:
+      type: ImageBlock
+
+      altText: Hero image
     styles:
       self:
         height: auto
