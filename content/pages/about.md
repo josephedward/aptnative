@@ -4,6 +4,7 @@ layout: PageLayout
 colors: colors-a
 backgroundImage:
   # url: /images/bg4.jpg
+  backgroundColor: grey
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
@@ -15,12 +16,9 @@ sections:
     text: >-
       ### Hello! 👋 😁
 
-           I'm Joseph. 
-           
-           My interests include: 
-           
-           *cloud native devops, data engineering, javascript art*
-
+          I'm Joseph. CEO of Apt Native.
+        
+          
     # ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
     # also where I’m based. I’m currently a free agent, ex-this, ex-that,
     # ex-super big name. When I’m not coding, writing or creating, I eat
@@ -67,30 +65,30 @@ sections:
         borderStyle: solid
   - type: MediaGallerySection
     colors: colors-f
-    subtitle: 'I worked with these folks:'
+    subtitle: 'We have worked with these clients:'
     images:
       - type: ImageBlock
-        url: /images/logo1.svg
+        url: /images/CH.png
         altText: Logo one
         caption: Logo one
       - type: ImageBlock
-        url: /images/logo2.svg
+        url: /images/magellan.png
         altText: Logo two
         caption: Logo two
       - type: ImageBlock
-        url: /images/logo3.svg
+        url: /images/best-buy-logo-0.png
         altText: Logo three
-        caption: Logo three
+      #   caption: Logo three
+      # - type: ImageBlock
+      #   url: /images/logo4.svg
+      #   altText: Logo four
+      #   caption: Logo four
       - type: ImageBlock
-        url: /images/logo4.svg
-        altText: Logo four
-        caption: Logo four
-      - type: ImageBlock
-        url: /images/logo5.svg
+        url: /images/techstyle.jpeg
         altText: Logo five
         caption: Logo five
-    spacing: 3
-    columns: 5
+    spacing: 50
+    columns: 4
     aspectRatio: auto
     showCaption: false
     enableHover: false
@@ -214,21 +212,21 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: 'WEB 3'
+        label: Cloud Native
       - type: Label
-        label: React
+        label: TypeScript
+      - type: Label
+        label: 'WEB 3'
       - type: Label
         label: AWS
       - type: Label
         label: Next.js
       - type: Label
-        label: Stackbit
-      - type: Label
-        label: Kale Shakes
+        label: Terraform
       - type: Label
         label: Rust
       - type: Label
-        label: Swift
+        label: Python
   - type: DividerSection
     styles:
       self:
@@ -246,7 +244,7 @@ sections:
     subtitle: 'Contact:'
     colors: colors-f
     text: |
-      [thisismyemail.@myemail.me](mailto:thisismyemail.@myemail.me)
+      [aptnative.@gmail.com](mailto:thisismyemail.@myemail.me)
   - type: DividerSection
     styles:
       self:
@@ -282,7 +280,7 @@ sections:
         subtitle: 'Companies:'
         text: |-
           - Best Buy
-          - Techstyle
+          - TechStyle
           - Change Healthcare
           - Magellan
 

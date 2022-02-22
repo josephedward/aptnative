@@ -3,7 +3,7 @@ title: Home
 layout: PageLayout
 colors: colors-a
 backgroundImage:
-  url: /images/logo.svg
+  # url: /images/logo.svg
   backgroundSize: stretch
   backgroundPosition: center
   backgroundRepeat: no-repeat
@@ -12,14 +12,23 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    # title: >-
-    #   Apt Native
-    # subtitle: >-
-    #   Your one-stop-AWS-consulting-shop in 2022! 
+    media:
+      type: ImageBlock
+      url: /images/logo.svg
+      altText: Hero image
+    title: >-
+      Scale.
+    subtitle: >-
+      Operational Excellence,
+      Security, Reliability, 
+      Performance Efficiency,
+      Cost Optimization, Sustainability -        
+      Apt Native takes AWS Well-Architected to the next level.
+    # Your one-stop-AWS-consulting-shop in 2022!
     styles:
       self:
         height: auto
-        width: wide
+        width: auto
         margin:
           - mt-0
           - mb-0
