@@ -132,7 +132,7 @@ function headerVariantD(props) {
     
     return (
         <div 
-        style={{opacity:1, backgroundColor:"darkslategrey"}}
+        style={{opacity:1}}
         className="flex items-stretch relative">
             {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
             {primaryLinks.length > 0 && (
