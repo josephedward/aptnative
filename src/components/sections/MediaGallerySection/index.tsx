@@ -52,7 +52,14 @@ export default function MediaGallerySection(props: MediaGallerySectionProps) {
         'data-sb-field-path': fieldPath
     } = props;
     return (
-        <Section type={type} elementId={elementId} colors={colors} styles={styles.self} data-sb-field-path={fieldPath}>
+        <Section
+        
+        
+        type={type} 
+        elementId={elementId} 
+        // colors={colors} 
+        styles={styles.self} 
+        data-sb-field-path={fieldPath}>
             {title && (
                 <h2 className={classNames(styles.title ? mapStyles(styles.title) : null)} data-sb-field-path=".title">
                     {title}
@@ -75,7 +82,9 @@ export default function MediaGallerySection(props: MediaGallerySectionProps) {
                     })}
                     data-sb-field-path=".images"
                     style={{
-                        gap: spacing ? `${spacing}px` : undefined
+                        gap: spacing ? `${spacing}px` : undefined,
+                        // backgroundColor: 'darkslategray'
+
                     }}
                 >
                     {images.map((image, index) => (

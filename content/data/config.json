@@ -2,7 +2,7 @@
     "type": "Config",
     "favicon": "/images/favicon.svg",
     "header": {
-        "headerVariant": "variant-b",
+        "headerVariant": "variant-d",
         "isSticky": true,
         "title": "APT Native",
         "isTitleVisible": true,
@@ -16,6 +16,11 @@
                 "type": "Link",
                 "label": "Projects",
                 "url": "/projects"
+            },
+            {
+                "type": "Link",
+                "label": "Blog",
+                "url": "/blog"
             }
         ],
         "socialLinks": [
@@ -34,6 +39,7 @@
                 "icon": "github"
             }
         ],
+        
         "styles": {
             "self": {
                 "width": "full",
@@ -72,7 +78,7 @@
             "title": "Contact details",
             "phoneNumber": "850-123-5021",
             "phoneAltText": "My phone number",
-            "email": "thisismyemail.@myemail.me",
+            "email": "aptnative.@gmail.com",
             "emailAltText": "My email",
             "address": "312 Lovely Street, Brooklyn, NY, 123456",
             "addressAltText": "My address"
