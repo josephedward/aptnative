@@ -58,9 +58,9 @@ export default class FormBlock extends React.Component<any> {
 
     render() {
         const { fields = [], elementId, action, destination, submitLabel, className, styles = {}, 'data-sb-field-path': annotation } = this.props;
-        if (fields.length === 0) {
-            return null;
-        }
+        // if (fields.length === 0) {
+        //     return null;
+        // }
         const formHoneypotName = `${elementId}-bot-field`;
         return (
             <form
@@ -76,7 +76,7 @@ export default class FormBlock extends React.Component<any> {
                 <div className="grid sm:grid-cols-2 sm:gap-x-4" data-sb-field-path=".fields">
                     <input type="hidden" name="form-name" value={elementId} />
                     <input type="hidden" name="form-destination" value={destination} />
-                    {fields.map((field, index) => {
+                    {fields? fields.map((field, index) => {
                         const fieldType = field.type;
                         if (!fieldType) {
                             throw new Error(`form field does not have the 'type' property`);
@@ -86,7 +86,7 @@ export default class FormBlock extends React.Component<any> {
                             throw new Error(`no component matching the form field type: ${fieldType}`);
                         }
                         return <FormControl key={index} {...field} data-sb-field-path={`.${index}`} />;
-                    })}
+                    }): ""}
                 </div>
                 <div className={classNames('mt-4', styles.submitLabel?.textAlign ? mapStyles({ textAlign: styles.submitLabel?.textAlign }) : null)}>
                     <button

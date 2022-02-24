@@ -130,6 +130,12 @@ function headerVariantD(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
     
+
+    console.log(props.primaryLinks)
+    
+    props.primaryLinks.pop(2)
+    // props.primaryLinks.pop()
+
     return (
         <div 
         style={{opacity:1}}
@@ -236,6 +242,8 @@ function siteLogoLink(props) {
 }
 
 function listOfLinks(links, inMobileMenu = false) {
+    
+
     return links.map((link, index) => (
         <li key={index} className={classNames(inMobileMenu ? 'text-center w-full' : 'inline-flex items-stretch')}>
             <Action
@@ -246,6 +254,7 @@ function listOfLinks(links, inMobileMenu = false) {
         </li>
     ));
 }
+
 
 function listOfSocialLinks(links, inMobileMenu = false) {
     return links.map((link, index) => (
