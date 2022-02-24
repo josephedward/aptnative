@@ -9,7 +9,9 @@ export default function BlankBaseLayout(props) {
     const pageMeta = page?.__metadata || {};
     const colors = page?.colors || 'colors-a';
     return (
-        <div className={classNames('sb-page', pageMeta.pageCssClasses, colors)} data-sb-object-id={pageMeta.id}>
+        <div 
+        
+        className={classNames('sb-page', pageMeta.pageCssClasses, colors)} data-sb-object-id={pageMeta.id}>
             {page?.backgroundImage && <BackgroundImage {...page?.backgroundImage} />}
             <Head>
                 <title>{page.title}</title>

@@ -207,16 +207,31 @@ sections:
     subtitle: 'Practice Areas:'
     items:
       - type: Label
-        label: Cloud Native Devops      
+        label: Cloud Native Devops
       - type: Label
         label: Data Migrations
-      - type: Label
-        label: Web3 Token Management
+      # - type: Label
+      #   label: Web3 Token Management
       - type: Label
         label: Site Reliability Engineering
       - type: Label
         label: Service Mesh Orchestration
-      
+      - type: Label
+        label: Amazon Web Services
+      - type: Label
+        label: EKS
+      - type: Label
+        label: ECS
+      - type: Label
+        label: ECR
+      - type: Label
+        label: API Gateway
+      - type: Label
+        label: CloudFormation
+      - type: Label
+        label: Lambda
+      - type: Label
+        label: Fargate
       # - type: Label
       #   label: TypeScript
       # - type: Label

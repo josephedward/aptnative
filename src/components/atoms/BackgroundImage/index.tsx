@@ -20,6 +20,7 @@ export default function BackgroundImage(props) {
                 className
             )}
             style={{
+                
                 backgroundImage: `url('${url}')`,
                 opacity: (opacity ?? 100) * 0.01
             }}

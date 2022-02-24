@@ -17,7 +17,9 @@ export default function DefaultBaseLayout(props) {
     const metaTags = seoGenerateMetaTags(page, site);
     const metaDescription = seoGenerateMetaDescription(page, site);
     return (
-        <div className={classNames('sb-page', pageMeta.pageCssClasses, colors)} data-sb-object-id={pageMeta.id}>
+        <div 
+        style={{backgroundColor:"teal"}}
+        className={classNames('sb-page', pageMeta.pageCssClasses, colors)} data-sb-object-id={pageMeta.id}>
             {page?.backgroundImage && <BackgroundImage {...page?.backgroundImage} />}
             <div className="sb-base sb-default-base-layout relative">
                 <Head>
