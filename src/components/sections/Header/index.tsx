@@ -129,13 +129,10 @@ function headerVariantC(props) {
 function headerVariantD(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
-    
-
-    console.log(props.primaryLinks)
-    
-    props.primaryLinks.pop(2)
-    // props.primaryLinks.pop()
-
+    // const placeHolder= "<p>placeholder text</p>"
+    // // console.log(props.primaryLinks)    
+    // props.primaryLinks.length>2?props.primaryLinks.pop(2):null
+    const pLink = props.primaryLinks[0]
     return (
         <div 
         style={{opacity:1}}
@@ -143,7 +140,7 @@ function headerVariantD(props) {
             {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
             {primaryLinks.length > 0 && (
                 <ul className="hidden lg:flex border-l border-current divide-x divide-current ml-auto" data-sb-field-path=".primaryLinks">
-                    {listOfLinks(primaryLinks)}
+                    {listOfLinksA(pLink)}
                 </ul>
             )}
             {/* {socialLinks.length > 0 && (
@@ -243,7 +240,6 @@ function siteLogoLink(props) {
 
 function listOfLinks(links, inMobileMenu = false) {
     
-
     return links.map((link, index) => (
         <li key={index} className={classNames(inMobileMenu ? 'text-center w-full' : 'inline-flex items-stretch')}>
             <Action
@@ -253,6 +249,19 @@ function listOfLinks(links, inMobileMenu = false) {
             />
         </li>
     ));
+}
+
+function listOfLinksA(link, inMobileMenu = false) {
+    
+    return (
+        <li key={0} className={classNames(inMobileMenu ? 'text-center w-full' : 'inline-flex items-stretch')}>
+            <Action
+                {...link}
+                className={classNames(inMobileMenu ? 'text-xl' : 'sb-component-link-fill p-4', 'font-normal', 'text-base', 'tracking-widest', 'uppercase')}
+                data-sb-field-path={`.${0}`}
+            />
+        </li>
+    );
 }
 
 
