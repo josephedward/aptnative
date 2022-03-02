@@ -12,7 +12,7 @@ export default function Header(props) {
     const headerWidth = props.styles?.self?.width || 'narrow';
     return (
         <header
-            style={{opacity:1 , backgroundColor: 'black'}}
+            style={{opacity:1 , backgroundColor: 'teal', color:""}}
             className={classNames('sb-component', 'sb-component-header', props.isSticky ? 'sticky top-0 z-10' : 'relative', 'border-b', 'border-current')}
             data-sb-field-path={`${props.annotationPrefix}:header`}
         >
@@ -129,9 +129,6 @@ function headerVariantC(props) {
 function headerVariantD(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
-    // const placeHolder= "<p>placeholder text</p>"
-    // // console.log(props.primaryLinks)    
-    // props.primaryLinks.length>2?props.primaryLinks.pop(2):null
     const pLink = props.primaryLinks[0]
     return (
         <div 

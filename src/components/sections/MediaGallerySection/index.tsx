@@ -19,6 +19,7 @@ type MediaGallerySectionProps = {
     enableHover: boolean;
     styles?: any;
     'data-sb-field-path'?: string;
+    bgColor:string;
 };
 
 type MediaGalleryItemProps = {
@@ -54,7 +55,7 @@ export default function MediaGallerySection(props: MediaGallerySectionProps) {
     return (
         <Section
         
-        
+
         type={type} 
         elementId={elementId} 
         // colors={colors} 
@@ -83,12 +84,13 @@ export default function MediaGallerySection(props: MediaGallerySectionProps) {
                     data-sb-field-path=".images"
                     style={{
                         gap: spacing ? `${spacing}px` : undefined,
-                        // backgroundColor: 'darkslategray'
+                        backgroundColor: props.bgColor
 
                     }}
                 >
                     {images.map((image, index) => (
                         <MediaGalleryImage
+
                             key={index}
                             image={image}
                             showCaption={showCaption}

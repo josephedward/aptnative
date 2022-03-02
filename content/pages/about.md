@@ -4,52 +4,52 @@ layout: PageLayout
 colors: colors-a
 backgroundImage:
   # url: /images/bg4.jpg
-  backgroundColor: grey
+  
   backgroundSize: cover
   backgroundPosition: center
   backgroundRepeat: no-repeat
   opacity: 75
 sections:
-  - elementId: ''
-    colors: colors-f
-    backgroundSize: full
-    text: >-
-      ### Hello! 👋 😁
+  # - elementId: ''
+  #   colors: colors-f
+  #   backgroundSize: full
+  #   text: >-
+  #     ### Hello! 👋 😁
 
-          I'm Joseph. CEO of Apt Native.
+  #         I'm Joseph. CEO of Apt Native.
 
-    # ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
-    # also where I’m based. I’m currently a free agent, ex-this, ex-that,
-    # ex-super big name. When I’m not coding, writing or creating, I eat
-    # cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
-    media:
-      type: ImageBlock
-      url: /images/1.jpg
-      altText: Hero image
-    styles:
-      self:
-        height: auto
-        width: wide
-        margin:
-          - mt-0
-          - mb-0
-          - ml-0
-          - mr-0
-        padding:
-          - pt-16
-          - pb-12
-          - pl-4
-          - pr-4
-        justifyContent: center
-      title:
-        textAlign: left
-      subtitle:
-        textAlign: left
-      text:
-        textAlign: left
-      actions:
-        justifyContent: flex-start
-    type: HeroSection
+  #   # ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
+  #   # also where I’m based. I’m currently a free agent, ex-this, ex-that,
+  #   # ex-super big name. When I’m not coding, writing or creating, I eat
+  #   # cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
+  #   media:
+  #     type: ImageBlock
+  #     url: /images/1.jpg
+  #     altText: Hero image
+  #   styles:
+  #     self:
+  #       height: auto
+  #       width: wide
+  #       margin:
+  #         - mt-0
+  #         - mb-0
+  #         - ml-0
+  #         - mr-0
+  #       padding:
+  #         - pt-16
+  #         - pb-12
+  #         - pl-4
+  #         - pr-4
+  #       justifyContent: center
+  #     title:
+  #       textAlign: left
+  #     subtitle:
+  #       textAlign: left
+  #     text:
+  #       textAlign: left
+  #     actions:
+  #       justifyContent: flex-start
+  #   type: HeroSection
   - type: DividerSection
     styles:
       self:
@@ -64,6 +64,7 @@ sections:
         borderStyle: solid
   - type: MediaGallerySection
     colors: colors-f
+    bgColor: orange
     subtitle: 'We have worked with these clients:'
     images:
       - type: ImageBlock
