@@ -12,7 +12,7 @@ export default function Header(props) {
     const headerWidth = props.styles?.self?.width || 'narrow';
     return (
         <header
-            style={{opacity:1 , backgroundColor: 'teal', color:""}}
+            style={{opacity:1 , backgroundColor: 'black', color:""}}
             className={classNames('sb-component', 'sb-component-header', props.isSticky ? 'sticky top-0 z-10' : 'relative', 'border-b', 'border-current')}
             data-sb-field-path={`${props.annotationPrefix}:header`}
         >

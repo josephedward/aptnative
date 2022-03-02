@@ -5,22 +5,21 @@ const axios = require('axios');
 // Handle the lambda invocation
 exports.handler = async function (event, context, callback) {
     try {
+        console.log(event);
         const url = process.env.STACKBIT_CONTACT_FORM_SUBMISSION_URL;
-
         if (!url) {
             throw new Error('No Stackbit URL specified');
         }
-
         const response = await axios({
             method: 'post',
             url,
             data: JSON.parse(event.body)
         });
-
         callback(null, {
             statusCode: 200,
             body: response.data.status
         });
+        document.window.open('google.com', '_blank');
     } catch (e) {
         callback(null, {
             statusCode: e?.response?.status ?? 500,

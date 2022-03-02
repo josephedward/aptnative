@@ -140,7 +140,7 @@ sections:
       type: FormBlock
       elementId: sign-up-form
       destination: ''
-      action: /.netlify/functions/submission_created
+      action: ''
       fields:
         # - name: firstName
         #   label: First Name

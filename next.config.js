@@ -15,6 +15,19 @@ module.exports = withBundleAnalyzer({
         // Allow production builds to successfully complete even if your project has ESLint errors.
         ignoreDuringBuilds: true
     },
+
+    async redirects(){
+
+        return[
+            {
+                source:'/calendly',
+                destination:"https://calendly.com/josephedwardwork",
+                permanent: false,
+                basePath: false
+            }
+        ]
+    },
+
     webpack: (config, { dev }) => {
         // Tell webpack to ignore watching content files in the content folder.
         // Otherwise webpack recompiles the app and refreshes the whole page.

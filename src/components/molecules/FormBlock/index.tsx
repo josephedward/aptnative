@@ -4,6 +4,8 @@ import classNames from 'classnames';
 
 import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
+import { Link, Action, Social } from '../../atoms';
+
 
 export default class FormBlock extends React.Component<any> {
     state = {
@@ -76,7 +78,7 @@ export default class FormBlock extends React.Component<any> {
                 <div className="grid sm:grid-cols-2 sm:gap-x-4" data-sb-field-path=".fields">
                     <input type="hidden" name="form-name" value={elementId} />
                     <input type="hidden" name="form-destination" value={destination} />
-                    {fields? fields.map((field, index) => {
+                    {fields ? fields.map((field, index) => {
                         const fieldType = field.type;
                         if (!fieldType) {
                             throw new Error(`form field does not have the 'type' property`);
@@ -86,18 +88,23 @@ export default class FormBlock extends React.Component<any> {
                             throw new Error(`no component matching the form field type: ${fieldType}`);
                         }
                         return <FormControl key={index} {...field} data-sb-field-path={`.${index}`} />;
-                    }): ""}
+                    }) : ""}
                 </div>
                 <div className={classNames('mt-4', styles.submitLabel?.textAlign ? mapStyles({ textAlign: styles.submitLabel?.textAlign }) : null)}>
-                    <button
-                        type="submit"
-                        className="sb-component sb-component-block sb-component-button sb-component-button-primary"
-                        data-sb-field-path=".submitLabel"
-                    >
-                        {submitLabel}
-                    </button>
-                    {this.state.submitted && <span className="ml-8">Thank you, your message was sent.</span>}
-                    {this.state.error && <span className="ml-8 text-info">Something went wrong, please try again.</span>}
+                    <Link href="/calendly">
+                        {/* <a target="_blank"> */}
+                            <button
+                                type="submit"
+                                className="sb-component sb-component-block sb-component-button sb-component-button-primary"
+                                data-sb-field-path=".submitLabel"
+                            >
+                                {submitLabel}
+                            </button>
+                        {/* </a>  */}
+                    </Link>
+
+                    {/* {this.state.submitted  && <span className="ml-8">Thank you, your message was sent.</span>} */}
+                    {/* {this.state.error && <span className="ml-8 text-info">Something went wrong, please try again.</span>} */}
                 </div>
             </form>
         );
