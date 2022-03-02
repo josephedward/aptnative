@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="50%" height="50%" fill="#ffffff"/>
+<g transform="matrix(1 0 0 1 500 500)" id="233588">
+<g style="">
+		<g transform="matrix(-1 0 0 1 0 0)" id="958328">
+<filter id="SVGID_153" y="-75.56%" height="251.12%" x="-75.56%" width="251.12%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+	<feOffset dx="-10" dy="10" result="oBlur"/>
+	<feFlood flood-color="rgb(0,0,0)" flood-opacity="1"/>
+	<feComposite in2="oBlur" operator="in"/>
+	<feMerge>
+		<feMergeNode/>
+		<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+</filter>
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(129,169,200); fill-rule: nonzero; opacity: 0.85;filter: url(#SVGID_153);" transform=" translate(-18, -18)" d="M 36 32 a 4 4 0 0 1 -4 4 H 4 a 4 4 0 0 1 -4 -4 V 4 a 4 4 0 0 1 4 -4 h 28 a 4 4 0 0 1 4 4 v 28 z" stroke-linecap="round"/>
+</g>
+		<g transform="matrix(-1 0 0 1 -0.002 -0.1315)" id="431046">
+<filter id="SVGID_154" y="-108.37%" height="316.74%" x="-123.03999999999999%" width="346.08%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+	<feOffset dx="-10" dy="10" result="oBlur"/>
+	<feFlood flood-color="rgb(0,0,0)" flood-opacity="1"/>
+	<feComposite in2="oBlur" operator="in"/>
+	<feMerge>
+		<feMergeNode/>
+		<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+</filter>
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(111,251,0); fill-rule: nonzero; opacity: 0.85;filter: url(#SVGID_154);" transform=" translate(-18.002, -17.8685)" d="M 14.747 9.125 c 0.527 -1.426 1.736 -2.573 3.317 -2.573 c 1.643 0 2.792 1.085 3.318 2.573 l 6.077 16.867 c 0.186 0.496 0.248 0.931 0.248 1.147 c 0 1.209 -0.992 2.046 -2.139 2.046 c -1.303 0 -1.954 -0.682 -2.264 -1.611 l -0.931 -2.915 h -8.62 l -0.93 2.884 c -0.31 0.961 -0.961 1.642 -2.232 1.642 c -1.24 0 -2.294 -0.93 -2.294 -2.17 c 0 -0.496 0.155 -0.868 0.217 -1.023 l 6.233 -16.867 z m 0.34 11.256 h 5.891 l -2.883 -8.992 h -0.062 l -2.946 8.992 z" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</svg>
