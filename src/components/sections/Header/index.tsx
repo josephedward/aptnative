@@ -150,7 +150,7 @@ function headerVariantD(props) {
                     {listOfSocialLinks(socialLinks)}
                 </ul>
             )} */}
-            {(primaryLinks.length > 0 || socialLinks.length > 0) && <MobileMenu {...props} />}
+            {(primaryLinks.length > 0 || socialLinks.length > 0) && <MobileMenuA {...props} />}
         </div>
     );
 }
@@ -160,6 +160,7 @@ function headerVariantD(props) {
 function MobileMenu(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
+    
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
 
@@ -210,6 +211,72 @@ function MobileMenu(props) {
                             {socialLinks.length > 0 && (
                                 <ul className="flex flex-wrap justify-center" data-sb-field-path=".socialLinks">
                                     {listOfSocialLinks(socialLinks, true)}
+                                </ul>
+                            )}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
+
+function MobileMenuA(props) {
+    const primaryLinks = props.primaryLinks || [];
+    const socialLinks = props.socialLinks || [];
+    const pLink = props.primaryLinks[0]
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const router = useRouter();
+
+    useEffect(() => {
+        const handleRouteChange = () => {
+            setIsMenuOpen(false);
+        };
+        router.events.on('routeChangeStart', handleRouteChange);
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChange);
+        };
+    }, [router.events]);
+
+    return (
+        <div className="ml-auto lg:hidden">
+            <button
+                aria-label="Open Menu"
+                title="Open Menu"
+                className="border-l border-current h-10 min-h-full p-4 focus:outline-none"
+                onClick={() => setIsMenuOpen(true)}
+            >
+                <span className="sr-only">Open Menu</span>
+                <MenuIcon className="fill-current h-6 w-6" />
+            </button>
+            <div className={classNames('sb-header-overlay', 'fixed', 'inset-0', 'overflow-y-auto', 'z-20', isMenuOpen ? 'block' : 'hidden')}>
+                <div className="flex flex-col min-h-full">
+                    <div className="border-b border-current flex items-stretch justify-between">
+                        {(props.logo || (props.title && props.isTitleVisible)) && siteLogoLink(props)}
+                        <div className="border-l border-current">
+                            <button
+                                aria-label="Close Menu"
+                                title="Close Menu"
+                                className="h-10 min-h-full p-4 focus:outline-none"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <CloseIcon className="fill-current h-6 w-6" />
+                            </button>
+                        </div>
+                    </div>
+                    {(primaryLinks.length > 0 || socialLinks.length > 0) && (
+                        <div className="flex flex-col justify-center flex-grow px-4 py-20 space-y-12">
+                            {primaryLinks.length > 0 && (
+                                <ul className="space-y-6" data-sb-field-path=".primaryLinks">
+                                    {listOfLinksA(pLink)}
+                                </ul>
+                            )}
+                            {socialLinks.length > 0 && (
+                                <ul className="flex flex-wrap justify-center" data-sb-field-path=".socialLinks">
+                                    {/* {listOfSocialLinks(socialLinks, true)} */}
                                 </ul>
                             )}
                         </div>
