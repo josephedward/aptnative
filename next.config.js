@@ -17,10 +17,9 @@ module.exports = withBundleAnalyzer({
     },
 
     async redirects(){
-
         return[
             {
-                source:'/calendly',
+                source:'/calendly/',
                 destination:"https://calendly.com/josephedwardwork",
                 permanent: false,
                 basePath: false

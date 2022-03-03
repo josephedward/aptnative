@@ -19,7 +19,7 @@ exports.handler = async function (event, context, callback) {
             statusCode: 200,
             body: response.data.status
         });
-        document.window.open('google.com', '_blank');
+    
     } catch (e) {
         callback(null, {
             statusCode: e?.response?.status ?? 500,

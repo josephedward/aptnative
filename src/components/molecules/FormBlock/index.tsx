@@ -91,7 +91,7 @@ export default class FormBlock extends React.Component<any> {
                     }) : ""}
                 </div>
                 <div className={classNames('mt-4', styles.submitLabel?.textAlign ? mapStyles({ textAlign: styles.submitLabel?.textAlign }) : null)}>
-                    <Link href="/calendly">
+                    <Link href="/calendly/">
                         {/* <a target="_blank"> */}
                             <button
                                 type="submit"
