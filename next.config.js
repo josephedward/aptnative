@@ -20,7 +20,7 @@ module.exports = withBundleAnalyzer({
         return[
             {
                 source:'/calendly/',
-                destination:"https://calendly.com/josephedwardwork",
+                destination:"https://calendly.com/aptnative",
                 permanent: false,
                 basePath: false
             }
