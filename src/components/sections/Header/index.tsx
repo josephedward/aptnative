@@ -156,7 +156,6 @@ function headerVariantD(props) {
 }
 
 
-
 function MobileMenu(props) {
     const primaryLinks = props.primaryLinks || [];
     const socialLinks = props.socialLinks || [];
