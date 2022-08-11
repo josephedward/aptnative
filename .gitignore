@@ -40,4 +40,4 @@ yarn-error.log*
 *.code-workspace
 .idea
 
-misc
+misc.DS_Store
