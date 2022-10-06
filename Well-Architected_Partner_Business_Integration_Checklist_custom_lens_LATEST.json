@@ -1,0 +1,1071 @@
+{
+    "schemaVersion": "2021-11-01",
+    "name": "Well-Architected Partner Business Integration Checklist",
+    "description": "Use this checklist to measure the current state of AWS Well-Architected integration with an AWS Partner's business and operational processes. Baseline current status and use the improvement plans to guide changes. Iterate over time to drive improvements in customer and partner outcomes through deeper integration with Well-Architected best practices. (V4.7, updated 2022-01-21)",
+    "pillars": [
+        {
+            "id": "PREP",
+            "name": "Well-Architected Business Preparation",
+            "questions": [
+                {
+                    "id": "PREP_01",
+                    "title": "Meet the Well-Architected Partner Program pre-requisites",
+                    "description": "Well-Architected partners must meet the entry and on-going membership requirements of the Well-Architected Partner Program (WAPP).",
+                    "helpfulResource": {
+                        "displayText": "Review the Well-Architected Partner Program guide on Partner Central.",
+                        "url": "https://partnercentral.awspartner.com/ContentFolderPartner?id=a1o8a00000FD2M3AAL"
+                    },
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Meet program tier requirements",
+                            "helpfulResource": {
+                                "displayText": "Advanced Tier AWS Services Path partners are eligible for membership of the Well-Architected Partner Program (WAPP)."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Program compliance requirements may change from time-to-time. Consult the WAPP program guide on Partner Central to confirm program requirements and for program updates here: https://partnercentral.awspartner.com/ContentFolderPartner?id=a1o8a00000FD2M3AAL"
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Executive sponsorship",
+                            "helpfulResource": {
+                                "displayText": "One executive sponsor (SVP/C-level equivalent or higher) is required, with visibility into multiple areas of the partner's organization, able to influence adoption and drive change management."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Integration of Well-Architected best practices into business, delivery, and operational processes requires executive sponsorship and support. As a whole-of-business activity, executive sponsors need visibility and influence into multiple areas of the business to drive adoption and change."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Well-Architected Leads",
+                            "helpfulResource": {
+                                "displayText": "2 x AWS Solutions Architect Professional Certified individuals as Well-Architected Leads per applicable Geo, who have attended a WAPP Bootcamp."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Partners are required to send to 2 Professional Solution Architects to the WAPP bootcamp. When logged into APN, Partners can self-register to attend the bootcamp at zero cost."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Complete Business Integration Checklist and create integration plan",
+                            "helpfulResource": {
+                                "displayText": "Complete this business integration checklist and provide an integration plan. Use the Improvement Plan section of this lens to guide changes to your organization to improve Well-Architected integration."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Use the Well-Architected Partner Business Integration checklist to measure the current state of AWS Well-Architected integration into your business and operational processes. The checklist has been built from pragmatic best-practices observed from multiple successful Well-Architected partners. This is not an audit, rather it's an iterative process. Baseline current status and use the improvement plans to guide changes. Iterate over time to drive improvements in customer and partner outcomes through deeper integration with Well-Architected best practices."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Update go-to-market (GTM) content",
+                            "helpfulResource": {
+                                "displayText": "Include Well-Architected as an element in GTM materials."
+                            },
+                            "improvementPlan": {
+                                "displayText": "An AWS Partner's internet presence specific to their Well-Architected practice, and consistent marketing messaging, provides customers with confidence about the Partner's capabilities and experience leveraging best-practices to reduce risk and reliably deliver good customer outcomes."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Meet WAPP review and remediation KPIs",
+                            "helpfulResource": {
+                                "displayText": "For 2022, conduct a minimum of 20 reviews on production or pre-production workloads; resolve a minimum of 60 high-risk issues (HRs) on production or pre-production workloads; submit minimum of 20 ACE opportunities tagged as 'well-architected' (review or remediations)."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Follow the instructions in the WAPP Partner Workflow document for recording reviews and requesting remediation credits. Ensure that a sufficient pipeline of customer Well-Architected reviews will exist for ongoing program membership. These reviews may be conducted on customer engagements as part of discovery or on-boarding activities. They may also be run on customer workloads in response to leads or opportunities from AWS account teams or by customers directly requesting a Well-Architected review. Your go to market (GTM) strategy needs to support multiple lead sources. Find the WAPP Partner Workflow document on Partner Central here: https://partnercentral.awspartner.com/ContentFolderPartner?id=0690h000005bL33AAE"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "PREP_02",
+                    "title": "Executive sponsorship",
+                    "description": "Business leadership teams need to be fully engaged both support and drive the implementation of Well-Architected best practices and tooling throughout their organizations. As a whole-of business initiative, executive sponsorship and line-of business ownership is essential for success.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Executive sponsorship",
+                            "helpfulResource": {
+                                "displayText": "The business has an executive leader (SVP/C-level equivalent or higher) sponsor of the Well-Architected partner program."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Integration of Well-Architected best practices into business, delivery, and operational processes requires executive sponsorship and support. Ensure your executive sponsor is aligned to the goals of Well-Architected business integration. Work with your AWS team to identify and engage with the Well-Architected Partner Program BD representative for your region."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Executive sponsor has visibility across the business",
+                            "helpfulResource": {
+                                "displayText": "The executive sponsor needs visibility into multiple areas of the organization in order to influence adoption and change management."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As a whole-of-business activity, executive sponsors need visibility and influence into multiple areas of the business to drive adoption and change. Ensure that your executive sponsor works with owners of each part of the customer journey for your business."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Each business stream has a Well-Architected sponsor",
+                            "helpfulResource": {
+                                "displayText": "C-level, or line-of-business owner sponsors exist for each stream that leverages Well-Architected, including Sales, Pre-sales, Delivery, and Operations (or equivalents in your business)."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Top-down support is essential to ensure separate teams are in alignment throughout the customer journey. When your senior leadership are aligned as Well-Architected sponsors, they can work together to adopt Well-Architected best practices across their areas of responsibility. This alignment reduces friction, drives collaboration, and improves the customer journey experience. Work with your executive sponsor to identify line of business owners. Ensure that they understand, and are supportive of, the goals of Well-Architected integration, and the benefits to their areas of responsibility."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Finance and risk leaders/CFO are aware of Well-Architected",
+                            "helpfulResource": {
+                                "displayText": "Non-delivery teams are aware of the importance of Well-Architected best practice to customer outcomes."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Well-Architected is relevant to the success of the business as a whole. Financial and risk implications are relevant to non-technical stakeholders. Build engagement with them to explain the value of Well-Architected best practices, and how it benefits both customers and the partner business as a whole."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Finance and risk leaders/CFO use Well-Architected data from your business to surface risk",
+                            "helpfulResource": {
+                                "displayText": "Insights from Well-Architected activities are used by finance and risk leaders to help understand the health of the business."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Close engagement and support of financial stakeholders is essential to surface risk early, so that a business can actively avoid cost associated with risk in an intentional manner, and allocate resources appropriately. Include Well-Architected insights in reporting to the risk owners in your business."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Finance and risk leaders/CFO use Well-Architected data to proactively plan and budget for risk and cost reduction activities",
+                            "helpfulResource": {
+                                "displayText": "Insights from Well-Architected activities are used by finance and risk leaders to proactively plan and manage the business, specifically to manage, and reduce, risk and cost over the long-term."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Well-Architected best practices encourage cost attribution and transparency, which helps financial stakeholders better manage costs, plan investments, and build accurate pricing models. Well-Architected insights should drive proactive decision-making by financial leaders as a key part of their cost management strategies, as well as risk mitigation and avoidance. Work with your financial leaders and risk owners to include risk mitigation and reduction activities informed by Well-Architected insights into their strategies and planning."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "PREP_03",
+                    "title": "Current delivery model",
+                    "description": "Partners need a well-defined and understood customer engagement model and delivery pipeline to map the phases of their customer engagements, and must resource each part of the journey properly. Each phase may not necessarily be carried out by different teams or team-members, but needs to be a well-defined and separated responsibility, with named stakeholders and owners.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Formal separation and definition of customer journey phases and activities",
+                            "helpfulResource": {
+                                "displayText": "The delivery pipeline has discrete phases that map to the customer journey (e.g. for marketing, sales, pre-sales, delivery, etc.), with defined roles and responsibilities for each."
+                            },
+                            "improvementPlan": {
+                                "displayText": "No matter whether your business has separate teams to manage each part of the customer engagement pipeline, or whether multiple phases are handled by a single team, it's essential to define activities, roles, and responsibilities. In cases where team members may work across multiple phases (for example consultants working to support both sales opportunities at an early stage, and also in delivery), ensure that all responsibilities and activities are captured. Start by mapping your typical customer journey, and identify functional areas of responsibility. By building a model of your complete customer engagement process, relevant goals, metrics and KPIs can be established to measure the health of each part of the process. This provides visibility of areas that require attention, and highlights best practices than can be shared."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Customer engagement responsibilities are separated and defined",
+                            "helpfulResource": {
+                                "displayText": "Customer acquisition, pre-sales, and scoping are well-defined and separate responsibilities."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As you build out the customer journey map, assign specific responsibility for top-of funnel, pre-sales, and scoping functions. You may have the same team member carrying out multiple roles, but establish separate and specific activities that relate to each role in your pre-sales organization."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Delivery responsibilities are separated and defined",
+                            "helpfulResource": {
+                                "displayText": "Architecture, design, implementation, and delivery are all distinct phases in the delivery pipeline."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As for customer engagement responsibilities, delivery activities need to be well-defined and separate. Small teams with multiple, well-defined responsibilities are more agile, and can expand or split as the business grows or in response to changes in customer needs. When automation or improvements in efficiency enable teams to take on more responsibility, their new roles and expectations are well-defined. Define specific delivery roles and activities."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Quality Assurance responsibilities are separated and defined",
+                            "helpfulResource": {
+                                "displayText": "QA processes and responsibilities have well-defined owners for each project, ensuring appropriate standards of delivery are maintained on all engagements."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Regardless of the development methodology you use, quality assurance and delivery standards must be well-defined and owners assigned. This may be on a per-project basis, but ideally should be common across the business. As before, you may have the same team member carrying out multiple roles, but establish separate and specific activities that relate to each role."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Operational responsibilities are separated and defined",
+                            "helpfulResource": {
+                                "displayText": "Long-term support, maintenance, and managed services roles and responsibilities exist. Roles are defined for operational responsibilities and internal workloads."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Extend your delivery model to include internal workloads and operational responsibilities, and include managed services practices, support and maintenance activities. Defined roles (even when performed by the same person) will enable you to manage long-term support and delivery activities better, and manage your teams more effectively."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Ongoing customer engagement responsibilities are defined and separated",
+                            "helpfulResource": {
+                                "displayText": "Responsibility for ongoing engagements and follow-up opportunities with customers is a defined role."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As a trusted delivery partner, you will continue to deliver value to your customers through ongoing engagements and follow-on projects. You may already be doing this on an ad-hoc basis through your existing sales team. Assign specific responsibilities and activities to support and accelerate these ongoing opportunities from existing customers. This may be a dedicated customer success role, or it may be handled through your existing customer account management structure."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && (choice_2 || choice_3 || choice_4 || choice_5 || choice_6)",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "PREP_04",
+                    "title": "Internal enablement",
+                    "description": "Knowledge and understanding of the value of best practices is essential for all teams. Training, workshops, internal marketing, and enablement processes need to be integrated with Well-Architected resources so that teams can stay up to date. Ongoing investment in skills development is required to keep your team current with best practices.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Employees are responsible for self-paced learning, time is allocated for training as required",
+                            "helpfulResource": {
+                                "displayText": "No formal enablement may be scheduled, employees are expected to up-skill in response to their needs, and time is allocated for learning activities."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Identify and define learning objectives for your teams. Learning is an ongoing requirement for all roles, and time should be allocated accordingly so that delivery timelines are not impacted. Ensure that team members make use of resources such as AWS Training and Certification, AWS Skill Builder, and webinars from AWS PartnerCast for self-paced learning. Learn more about AWS Training and Certification here: https://aws.amazon.com/training/"
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Informal, ad-hoc, reactive, or on-demand training is held from time to time",
+                            "helpfulResource": {
+                                "displayText": "As training needs emerge, specific training is scheduled for your team."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Identify and define learning objectives for your teams both in response to upcoming work and long-term skills objectives. Ensure that suitable sources of training, such as official AWS Training Partners and AWS Partner Training and Certification teams are engaged to help meet your training needs. Learn more about AWS Partner Training and Certification here: https://aws.amazon.com/partners/training/"
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Regular, scheduled training and enablement is held for technical teams",
+                            "helpfulResource": {
+                                "displayText": "A program exists for regular learning and enablement events for technical teams."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Establish a schedule of informal and formal learning and enablement events for internal team members. These could be weekly brown-bag sessions, or more formal learning. When to schedule enablement is important to consider. Delivery teams need time to up-skill in response to campaigns or go-to-market strategies. Build in sufficient lead-time to allow your team to build relevant capabilities. "
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Regular, scheduled training and enablement is held for non-technical teams",
+                            "helpfulResource": {
+                                "displayText": "A program exists for regular learning and enablement events for non-technical teams, including business, sales, and marketing teams."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Enablement of business teams and routine refreshers are essential to keep teams current, motivated and set the long-term Well-Architected strategy, and drive required transformation. When to schedule enablement is important to consider. For example, sales teams need sufficient lead-time on enablement to support the expected deal cycles. and campaigns. Marketing teams should be aware of and use resources provided at no cost to APN Partners through AWS Partner Marketing Central to create demand for partner AWS solutions. Visit AWS Partner Marketing Central here: https://aws.amazon.com/partners/marketing/"
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Formal learning pathways are defined for technical roles",
+                            "helpfulResource": {
+                                "displayText": "Learning and enablement pathways are defined for all technical roles, including AWS certifications, and relevant skills required."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Build structured or formal learning paths for all teams to support ongoing learning, and to pivot more rapidly in response to unanticipated customer needs. Building enablement time into the business model means you never have to prioritize delivery over learning. This ensures that all teams remain up-to-date through continuous learning and skills development. Work with your AWS Partner Training and Certification team, and leverage AWS Partner Learning Paths for Technical Professionals to build a learning program tailored to your business needs. Learn more about technical learning paths here: https://aws.amazon.com/partners/training/path-tech-pro/?nc2=sb_pt_tp"
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Formal learning pathways are defined for non-technical roles",
+                            "helpfulResource": {
+                                "displayText": "Learning and enablement pathways are defined for all non-technical roles, including AWS business certifications, and relevant skills required."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Best practices aren't only relevant to technical teams. Sales teams need to understand how best practices relate to the core value proposition of the business as they're often the first point of contact for a customer. Customers expect non-technical teams to have a clear understanding of their needs, and the importance of best practices. Work with your AWS Partner Training and Certification team, and leverage AWS Partner Learning Paths for Business Professionals to build a learning program tailored to your business needs. Learn more about business learning paths here: https://aws.amazon.com/partners/training/path-bus-pro/?nc2=sb_pt_bp"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && (choice_2 || choice_3 || choice_4 || choice_5 || choice_6)",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "PREP_05",
+                    "title": "Goals, metrics and KPIs",
+                    "description": "Successful partners define and track both internal and customer-facing metrics. They establish KPIs for each part of the business and set goals, measuring the impact of risk on customer and business outcomes and use metrics to drive improvement where required.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Metrics are formally defined",
+                            "helpfulResource": {
+                                "displayText": "Metrics are defined for key business activities."
+                            },
+                            "improvementPlan": {
+                                "displayText": "A core principle of the Well-Architected Framework is continuous learning, measurement, and improvement. By defining the right metrics, and iterating to ensure they remain relevant, you are better able to learn about your business and customer's needs. This is essential to both improve both customer outcomes and ensure that your business is performing as intended. Start with defining the metrics that matter to your core business outcomes and identify common sources of information or reports that you rely on to make decisions regularly. Start with a small number of key metrics so you can get up and running quickly, and then iterate to expand the metrics over time. "
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Metrics are defined for all parts of the business",
+                            "helpfulResource": {
+                                "displayText": "Metrics cover all business units and activities. Both internal and customer-facing activities have associated metrics defined."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Defining metrics for business risk, and using Well-Architected reviews for internal processes and workloads to identify risk, means you can plan to mitigate and reduce risks before your business is impacted. Identify metrics relevant to each business activity, both internal and customer-facing. For example, capture sales and marketing metrics (e.g. cost of acquisition, flow-through rates, etc); customer metrics (e.g. revenue per customer, cost per customer, churn rates, etc.); delivery metrics (e.g. delivery velocity, deployment time, deployment failure rate, etc.); operational metrics (e.g. WA reviews per customer workload, HRIs per workload/best practice alignment, cost of management, cost per HRI, time to remediate, etc.)."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Metrics are collected and analyzed",
+                            "helpfulResource": {
+                                "displayText": "Metrics from across the business have a reliable and regular collection process and are surfaced to business stakeholders for analysis."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Metrics need to be analysed appropriately so that you're not investing in collecting data without extracting relevant information. Consider how automation can help you collect metrics from reports and existing sources of information to build a consolidated whole-of-business view or dashboard. Ensure metrics are surfaced promptly to minimize delays in action and ensure insights are relevant."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Key performance indicators are identified",
+                            "helpfulResource": {
+                                "displayText": "KPIs have been established consisting of either raw metrics or a combination, that provide insight relevant to business and customer outcomes. These are reported to, and tracked by, senior leadership."
+                            },
+                            "improvementPlan": {
+                                "displayText": "KPIs are the key measurements that matter to your business outcomes and are the most relevant and impactful. KPIs may be raw metrics or are more likely built from a combination of metrics that together provide insight. Ensure that visibility of business outcomes is reflected in your KPIs, and that your business leadership team has visibility of KPIs and tracks them. "
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Baselines are established and goals are set",
+                            "helpfulResource": {
+                                "displayText": "Metrics are collected and analyzed over time to establish baselines of performance. Goals are set that relate to business outcomes and performance."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Tracking metrics and KPIs over time allows you to identify patterns of behaviour and performance baselines. This provides you with the ability to set goals to drive improvements over time. Relate performance improvement goals to tangible business and customer outcomes. Work with your business leadership team to set goals for improvements."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Goals, metrics and KPIs are validated and updated periodically with feedback mechanisms",
+                            "helpfulResource": {
+                                "displayText": "The achievement of outcomes and the effectiveness of KPIs and metrics are validated and updated periodically."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Goals, metrics, and KPIs need to be periodically validated to ensure that they are effective and relevant. As your business and customer needs evolve, so must your metrics, and it's essential to define and follow a periodic review process. Consider what additional information is used on an ad-hoc basis by business leaders to make decisions or to measure business performance, and whether these data sources can be incorporated. Schedule reviews of goals to align to your business planning cycle. Be sure to track metric and KPI validity more frequently, so you can pivot as required."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "DEL",
+            "name": "Well-Architected Delivery Integration",
+            "questions": [
+                {
+                    "id": "DEL_01",
+                    "title": "Architecture and design",
+                    "description": "Well-Architected reviews are relevant to production workloads and also to solutions in development. The design phase is the ideal time to leverage a Well-Architected review to validate design choices, and promote best-practice adoption as early in the workload lifecycle as possible.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Best practices are defined for solution designs",
+                            "helpfulResource": {
+                                "displayText": "Instead of only relying only on their training and experience, Solution Architects follow well-defined organizational standards when designing solutions."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Establish company-wide best practices and standards for designing solutions. With the sponsorship of the Well-Architected Partner Executive Sponsor, establish an Architecture Centre of Excellence (ACoE) team with responsibility for defining whole-of-business standards of architectural best practice. Ensure that all major teams are represented by appropriately skilled individuals, and that the ACoE is representative and inclusive."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Formal design reviews are carried out before implementation",
+                            "helpfulResource": {
+                                "displayText": "Prior to implementation, design reviews are carried out as a distinct activity."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Design reviews may be conducted on an ad-hoc basis, or as required. To ensure consistency, build a delivery process that requires a documented design review as part of the project artefacts before implementation work begins. This will 'shift-left' best practices early in the delivery pipeline, and allow risks to be caught and mitigated before they can flow downstream. This will potentially save both cost and time to remediate."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "A Well-Architected review is included as part of the design review process",
+                            "helpfulResource": {
+                                "displayText": "When reviewing architecture prior to implementation, a Well-Architected review is used to validate that the solution meets requirements, assumptions are valid, and that customer risk is taken into account."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Well-Architected reviews can be used to “shift-left” not just security, but all aspects of best practice, for impact across all pillars of the Well-Architected Framework. Include a Well-Architected review as a key step in your design review process. Running a review on a workload design, even before it enters production, allows architects to identify and remediate issues far sooner, with less cost and time. Assumptions can be validated, and a review can highlight any gaps or ambiguity in customer requirements."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "High-risk issues (HRIs) are remediated at design time prior to implementation",
+                            "helpfulResource": {
+                                "displayText": "HRIs that are identified as part of Well-Architected reviews run on solutions at the design stage are remediated before implementation work begins."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Not all HRIs can be identified early, but by using the Well-Architected review at design time ensures that those that can be identified before they move down the delivery pipeline are identified. A Well-Architected review should be included as part of your quality assurance process for design governance. Include time on all projects for design remediation to avoid costly and time-consuming re-work later."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Goals, metrics and KPIs are established for high-risk issues (HRIs) in solution designs",
+                            "helpfulResource": {
+                                "displayText": "Metrics and minimum acceptable HRIs are defined, and specific HRIs are identified as critical blockers. Critical HRIs are prioritized."
+                            },
+                            "improvementPlan": {
+                                "displayText": "To govern your design process, set minimum acceptable standards for HRIs in designs. Identify HRIs that are critical blockers, and that need to be remediated before a design enters production. Depending on the workload type, these critical HRIs may come from other Well-Architected lenses, such as the Serverless or SaaS lenses. By defining standards and critical HRIs, your team can easily identify and prioritize architectural issues with the most impact to downstream processes and customers, and ensure that they are caught as early in the delivery process as possible."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "DEL_02",
+                    "title": "Implementation",
+                    "description": "The Well-Architected framework should inform choices made in both the architecture and the implementation of solutions. Leveraging Well-Architected reviews through the implementation phase continues the adoption of best-practices and ensures that Well-Architected solutions are built from Well-Architected designs.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Best practices are defined for implementation",
+                            "helpfulResource": {
+                                "displayText": "Instead of only relying only on their training and experience, engineers follow well-defined organizational standards when implementing solutions."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Your engineering teams should have well-defined processes and standards to follow. These standards should be periodically reviewed to ensure continued relevance and fitness for purpose, and updated or retired as required. Establish company-wide best practices and standards for implementing solutions. Ensure your Architecture Centre of Excellence (ACoE) team includes representatives from engineering teams to define whole-of-business standards of engineering and implementation best practices."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Formal implementation reviews are carried out before release",
+                            "helpfulResource": {
+                                "displayText": "Prior to release, code, engineering, and infrastructure reviews are carried out as a distinct activity."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Code or engineering reviews may be conducted on an ad-hoc basis, or as required. Infrastructure-as-code (IaC) should be leveraged to enable validation of the complete solution. To ensure consistency, build a delivery process that requires a documented code review as part of the delivery. This could be a review of code commits to a repository, or a more formal review of the implementation of each phase, depending on requirements. The process needs to be consistent and documented as part of the project artefacts. Consider how automation can be leveraged to perform validation of coding standards, check for common implementation issues, or customized as required for specific use-cases."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "A Well-Architected review is updated as part of the implementation process",
+                            "helpfulResource": {
+                                "displayText": "The Well-Architected review created at the design phase is updated during implementation as more details of the solution become clear as implementation progresses."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As not all issues are apparent at design time, your engineering teams need to continue the early detection and remediation of issues by re-visiting the solution's Well-Architected review as implementation proceeds. The initial Well-Architected review created at design time will include many unknown items that depend on implementation decisions downstream. Reviews must be updated as part of the delivery process to validate design decision, highlight implementation risk for escalation, and resolve ambiguity. Depending on the delivery methodology, this could be after every sprint, or after each delivery phase. A workload's Well-Architected review should follow the implementation pipeline, and form part of the documentation that is created as implementation progresses."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "High-risk issues (HRIs) are remediated at implementation time prior to release",
+                            "helpfulResource": {
+                                "displayText": "HRIs identified during the implementation phase are remediated are in the implementation phase, before release. Time is specifically built into project plans for this purpose."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Addressing HRIs is essential before they impact downstream activities. Depending on their cause, HRIs will be immediately addressable within the delivery team, or require escalation to project stakeholders or customers for review. As issues emerge, they should be remediated as early as possible. Build contingency into project plans and schedules to specifically close off HRIs. Include processes to escalate HRIs upstream to Solution Architects, and allow for HRIs to be escalated back to customers if required."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Goals, metrics and KPIs are established for high-risk issues (HRIs) in implementation",
+                            "helpfulResource": {
+                                "displayText": "Metrics and minimum acceptable HRIs are defined, and specific HRIs are identified as critical blockers and prioritized."
+                            },
+                            "improvementPlan": {
+                                "displayText": "To govern your delivery process, establish minimum acceptable standards and define critical issues for the implementation phase. Share and adopt these standards throughout the business. The range of critical issues should be expanded to take into account implementation details that are unknown at design time. Create goals, metrics, and KPIs for HRIs in the implementation phase. Start by creating a metric to baseline the HRIs surfaced during implementation on projects. Use this baseline to build in sufficient time in your delivery cycles to remediate HRIs on future projects. Set goals to improve this metric to reduce delivery risk, and to increase quality and delivery speed."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "DEL_03",
+                    "title": "Quality Assurance",
+                    "description": "Quality assurance processes should leverage Well-Architected reviews to identify areas of risk, regardless of location in the delivery pipeline, and mandate remediation as part of sign-off.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Individuals are responsible for Quality Assurance",
+                            "helpfulResource": {
+                                "displayText": "As part of the delivery process, engineering team members have individual responsibility for code quality, unit testing, and quality of their deliveries."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Activities to promote Quality Assurance (QA) should be included in all delivery activities. Individual delivery team members need to be empowered, and expected, to take responsibility for the quality of their deliverables and code quality. QA isn't an activity to be performed after the development is complete, it needs to be the responsibility of all teams."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Best practices are defined for Quality Assurance",
+                            "helpfulResource": {
+                                "displayText": "Instead of only relying only on their training and experience, engineers follow well-defined organizational standards for Quality Assurance (QA)."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Although quality is always a joint responsibility for both individuals and teams at all points in the delivery pipeline, your team needs the support and guidance of well-defined, relevant, standardized quality processes and tooling. These standards should be periodically reviewed to ensure continued relevance and fitness for purpose, and updated or retired as required. Establish company-wide best practices and standards for QA. Ensure your Architecture Centre of Excellence (ACoE) team includes representatives with QA responsibility and ownership to define whole-of-business standards for QA and tooling. Consider how automation can improve consistency and quality outcomes with less manual effort. Coding standards and common issues can be identified with linting and static analysis tools at code commit time. Continuous integration practices allow for automated integration testing using services like Amazon Code Guru (https://aws.amazon.com/codeguru/), and AWS Device Farm (https://aws.amazon.com/device-farm/)."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "A Well-Architected review is updated as part of the Quality Assurance process",
+                            "helpfulResource": {
+                                "displayText": "The Well-Architected review created at the design phase is updated throughout the delivery phases, including for Quality Assurance (QA) purposes."
+                            },
+                            "improvementPlan": {
+                                "displayText": "The Well-Architected review that is included with all deliveries needs to be updated as part of the Quality Assurance (QA) function. Depending on your development methodology, this could be at the end of each sprint, or during each project phase or milestone. Create milestones in the Well-Architected review that map to project milestones and delivery phases. This tracks risk throughout the delivery pipeline, and ensures that as HRIs are closed off through the development process, they are not re-introduced. This approach supplements your regression testing activities, and provides a consistent measure of delivery risk for business and customer stakeholders."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "High-risk issues (HRIs) are remediated prior to release to customers",
+                            "helpfulResource": {
+                                "displayText": "HRIs identified during Quality Assurance (QA) activities are remediated by implementation teams before release to customers. Time is specifically built into project plans for this purpose."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Ensure that the Well-Architected review is a key component of the quality assurance sign-off process, and define acceptable HRI and critical issues counts a solution must meet before release. Create processes to identify and prevent common HRIs, so that your delivery pipelines evolve to drive improvements in quality through repeatable risk reduction."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Goals, metrics and KPIs are established for high-risk issues (HRIs) in Quality Assurance",
+                            "helpfulResource": {
+                                "displayText": "Metrics and minimum acceptable HRIs are defined, and specific HRIs are identified as critical blockers and prioritized to prevent HRIs reaching customer production workloads."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Create metrics to track specific HRIs. Identify and resolve any procedural issues in your delivery pipeline by monitoring for patterns of reoccurring HRIs within the same project or across the business. Establish QA targets in terms of HRIs, and build baselines and implement feedback processes to improve delivery quality. Use resources like the AWS Well-Architected Framework's FTR lens to define an initial list of critical HRIs, and continue to evolve over time. Learn more about the FTR lens here: https://apn-checklists.s3.amazonaws.com/foundational/partner-hosted/partner-hosted/CVLHEC5X7.html"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "DEL_04",
+                    "title": "Tooling and processes",
+                    "description": "Delivery tooling and processes should be regularly reviewed to ensure they remain Well-Architected and fit for purpose, in order to reduce time of development and deployment risks for both partners and customers. Well-Architected delivery processes are essential to create Well-Architected solutions for customers.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Documented processes and standards are in use by delivery teams",
+                            "helpfulResource": {
+                                "displayText": "Instead of only relying only on their training and experience, or ad-hoc or undocumented processes, delivery teams follow well-defined organizational standards and processes."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Establish company-wide best practices and standards for delivery processes. Ensure your Architecture Centre of Excellence (ACoE) team works closely with operations and project delivery stakeholders to standardize processes, tooling, and documentation throughout the business. Standardize on best practices that exist in the business. Where processes don't exist, start with lightweight processes and refine them over time. Ensure centralized repositories and knowledge-management systems exist, are accessible, and are used by delivery teams. Leverage services such as Amazon Kendra (https://aws.amazon.com/kendra/) to improve information retrieval efficiency."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Processes and tooling are regularly reviewed for effectiveness",
+                            "helpfulResource": {
+                                "displayText": "Feedback loops exist to measure the effectiveness of tooling and processes, and ensure they evolve over time to meet the changing needs of both the business and customers."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Delivery tooling and processes will rapidly evolve to respond to the needs of your customers and business. Development tools will change frequently as your team adopts new applications or paradigms to take advantage of industry trends and improvements. Ensure that you have a process to periodically review all of your delivery tooling and your processes to make sure they remain fit-for purpose. Update the Well-Architected review of your delivery tooling to identify when to retire tools and processes that are no longer effective."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "High-risk issues (HRIs) in internal delivery tooling and processes are remediated",
+                            "helpfulResource": {
+                                "displayText": "Internal tooling and delivery pipelines are subject to Well-Architected reviews, and HRIs identified are remediated."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Identify internal infrastructure and workloads that are used to deliver solutions for your customers. These may be CI/CD pipelines, your code repository, or even line-of-business applications like CRM systems. Ensure that you have subjected these workloads to a Well-Architected review to identify and mitigate operational risk to your business. Ensure that all internal tooling and processes used by your delivery teams are subject to a Well-Architected review. In particular pay close attention to the Operational Excellence pillar to ensure that both your operational delivery processes and tooling remain aligned to best-practices. Prioritize and build a project plan to remediate internal HRIs, and escalate risks to your business stakeholders so that resources required to remediate HRIs can be allocated and budgeted for."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Tooling is automated, and opportunities to automate manual process are sought",
+                            "helpfulResource": {
+                                "displayText": "Delivery teams automate where possible and are empowered to continually reduce manual processes in their work."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Identify where you can automate processes to reduce errors, and time spent on manual, repetitive processes. Empower your teams to seek opportunities to automate their work to enable them to focus on higher-value activities that matter to your business and your customers. When choosing a new tool to adopt in your delivery pipeline, use the Well-Architected review to identify how it will reduce risk and improve outcomes for you and your customers. Be confident that you are making a data-driven decision instead of adopting tooling due to hype."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Training on internal tooling and processes is provided, and maintained to be up to date",
+                            "helpfulResource": {
+                                "displayText": "Documentation for common processes and tooling is maintained, and training is provided."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Ensure your teams can quickly get up to speed on new projects or when on-boarding. Document processes and tooling in use, and ensure it is up to date, and easily accessible. Where training is required, ensure it is fit for purpose and maintained. Assign ownership of internal process documentation and training. Identify common blockers as new team members are on-boarded and create training to remove blockers and enable your team members to contribute sooner."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "Goals, metrics and KPIs are established as minimum acceptable standards for delivery tooling and processes",
+                            "helpfulResource": {
+                                "displayText": "Metrics and minimum acceptable HRIs are defined for internal tooling and workloads."
+                            },
+                            "improvementPlan": {
+                                "displayText": "To govern your delivery pipeline, establish minimum acceptable standards and define critical issues for tooling and delivery processes. The range of critical issues will depend on specific domains relevant to your business and customers. Use resources like the AWS Well-Architected Framework's FTR lens to define an initial list of critical HRIs, and continue to evolve this over time. Establish metrics and goals to drive improvements in your delivery process. Start with a measure of time to on-board a new team-member, and use this metric to identify blockers. Driving on-boarding time down through improvements in training and documentation will help your business improve efficiency as you scale. Learn more about the FTR lens here: https://apn-checklists.s3.amazonaws.com/foundational/partner-hosted/partner-hosted/CVLHEC5X7.html"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "DEL_05",
+                    "title": "Reference architecture re-use",
+                    "description": "Identification and re-use of common architecture patterns is a key part of scale and growth. Partners who identify common components in their deliveries can accelerate delivery times and improve efficiency. They work intentionally to encourage the re-use and improvement of modular components to reduce costs and risk, and drive value to customers.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Re-use of existing architectures or solutions are used as a start-point",
+                            "helpfulResource": {
+                                "displayText": "Existing solutions or architecture patterns are used as a basis for most projects."
+                            },
+                            "improvementPlan": {
+                                "displayText": "There are no prizes for re-inventing the wheel. When scoping or starting design work on any project, build in time to review previous projects and deliveries and identify where you may have solved similar problems previously. Although the use-cases may differ, experience with specific domains or AWS services will enable you to build faster in future. Leverage internal know-how and capabilities when resourcing projects to accelerate delivery."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Common solution or architecture components are formally identified for re-use",
+                            "helpfulResource": {
+                                "displayText": "Reviews of deliveries are carried out to identify common elements and capabilities."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Once you start running reviews across multiple workloads, you will begin to identify patterns. These will either be design patterns that you repeatedly deploy for multiple customers, or underlying capability that you leverage time and again to build solutions. These patterns are the core of your IP, and should be extracted to form your reference architectures. Partners who re-use IP are less reliant on time and materials delivery, and tend to build more packaged solutions built on Well-Architected foundations. This allows them to scale more effectively. Start with an initiative to review your recent deliverables to identify patterns you re-use, or components that you deliver. Instead of focussing on specific components, work backwards from customer outcomes you repeatedly enable with larger modules. These are often at the granularity you would list as line items on a statement of work, not the fine level of component details that your engineering teams work with. An example would be a set of services you have built to serve a specific business outcome, or templates to perform common tasks. Identify how each of your recent statements of work breaks down into no more than 10 broad functional categories. Identify similarities and common areas where you have re-used patterns. These will form the core high-level architectural components for re-use."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Standardized reference architectures are in use",
+                            "helpfulResource": {
+                                "displayText": "Deliveries routinely begin with an existing template or identified best practice pattern."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Having identified which patterns form the basis of your repeated deliveries and reference architecture, extract them into a dedicated repository. Make use of extensive catalogues of best practice architectures available from resources such as the AWS Architecture Center, AWS Solutions Library, and AWS Well-Architected Labs. Ensure your Architecture Centre of Excellence (ACoE) team works closely with project teams to create standards that mandate reference architectures as a start-point on all projects. By bootstrapping projects from a Well-Architected foundation, you can focus on the specifics of the solution that provide functional value to the customer, or the domain that relates to your business expertise or specialization. Treating foundational best practice as undifferentiated heavy lifting means you can further build on specific capabilities that differentiate your business. Visit the AWS Architecture Center here: https://aws.amazon.com/architecture/"
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Reference architectures have associated Well-Architected reviews",
+                            "helpfulResource": {
+                                "displayText": "Repeatable assets are subject to Well-Architected reviews, and high-risk issues (HRIs) are remediated."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Reference architectures need to be Well-Architected to ensure that they are fit for purpose, and can be reliably deployed to solve customer problems without introducing risk. By building architectural components that remediate known HRIs, you can rapidly improve customer workloads through re-use of components that address specific HRIs. And be sure to leverage automation to reduce the cost of remediation still further."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Reference architectures are curated and have owners",
+                            "helpfulResource": {
+                                "displayText": "Repeatable assets are stored in a central repository, and each asset has an owner responsible for managing the asset's lifecycle."
+                            },
+                            "improvementPlan": {
+                                "displayText": "To ensure that these reference architectures remain Well-Architected and fit for purpose, it’s critical to curate them. Assign an owner and a process to monitor their use, and ensure that you have periodic coverage of these components through either dedicated or ongoing Well-Architected reviews. Pro-active management of your repeatable assets will ensure that they remain relevant and are effective in delivering value to you and your customers."
+                            }
+                        },
+                        {
+                            "id": "choice_6",
+                            "title": "A process is defined to iterate and improve reference architectures over time",
+                            "helpfulResource": {
+                                "displayText": "Feedback processes exist to ensure that owners of repeatable assets can continue to evolve and improve them over time, and can monitor their effectiveness. Time is allocated for iteration."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Ensure that any findings or improvements indicated are made to your design patterns, and that your teams only re-use the most up-to-date versions. Ensure that your repeatable assets continue to evolve to incorporate new AWS services or best practices, and that they have a defined lifecycle. Repeatable assets will, in time, require retirement when they are no longer fit for purpose, or have been superseded by new best practice patterns or technologies. Consider when it is suitable to replace your repeatable assets with ISV solutions, for example. This removes the necessity of maintenance, and can reduce the TCO through economies of scale that an ISV can achieve. Ensure that you have metrics and KPIs for your reference architectures to ensure that they deliver return on investment."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5 && choice_6",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "OPINT",
+            "name": "Well-Architected Operational Integration",
+            "questions": [
+                {
+                    "id": "OPINT_01",
+                    "title": "Internal workloads",
+                    "description": "Partners rely on a range of applications and platforms to run their businesses and to support customer outcomes. Operational health includes both the health of internal workloads as well as the health and success of the operational activities to support them.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Internal workloads are identified, catalogued, and have owners",
+                            "helpfulResource": {
+                                "displayText": "All internal workloads that the business relies on to operate and to deliver customer outcomes are centrally documented and have owners assigned to them."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As organizations grow, they adopt systems and operational workloads both organically and intentionally. To control and manage risk to any business it's important to identify and catalogue those systems that the business relies upon to operate. These can be line of business applications such as CRMs or financial applications, as well as operational infrastructure such as email providers and ISPs. Start by identifying your internal workloads and documenting or assigning ownership and operational responsibility. Document any existing SLAs for external providers, and RPOs and RTOs if known. Assess the business criticality of these workloads and any known risks or issues."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Internal workloads are subject to Well-Architected reviews",
+                            "helpfulResource": {
+                                "displayText": "Internal workloads are prioritized by business criticality, and Well-Architected reviews are used to measure alignment to best practices and surface operational and architectural risks."
+                            },
+                            "improvementPlan": {
+                                "displayText": "The workloads and operational processes that support your business need to be secure, reliable, fit-for purpose, and cost-effective. It's essential that any latent risk from these operational workloads is surfaced so that you can plan to mitigate or remediate this risk in an intentional way, before it impacts your business. Bear in mind that the Well-Architected Framework refers to both operational and architectural best practices. Operational processes are workloads too, and likewise need to be fit for purpose. Prioritize the catalogue of internal workloads by business criticality, and assign responsibility to workload owners to ensure Well-Architected reviews are run on their workloads, and risks surfaced accordingly. "
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "High-risk issues (HRIs) in internal workloads are remediated",
+                            "helpfulResource": {
+                                "displayText": "An ongoing program of work to remediate internal workload HRIs has been established, and time and resources are allocated. "
+                            },
+                            "improvementPlan": {
+                                "displayText": "Cost efficiency is of utmost importance to any business, and your internal workloads need to be as efficient as possible to avoid waste. Similarly, it's important to consider the long-term cost-avoidance impacts of risk in your operational workloads. Any business has finite resources, and it can be difficult to prioritize work on internal systems with the competing demands of customer delivery. Well-Architected reviews allow your organization to make data-driven decisions to allocate budget and time to make improvements early, and help you balance the competing priorities of customer delivery. Prioritize HRIs by workload and business criticality and establish a program of work to remediate them. Continuous improvement is a long-term objective, so resource the program accordingly. Over time your business and customer needs will change, and HRIs will be re-prioritized as new tools are adopted and processes evolve. Consider how adoption of new tooling or solutions could reduce operational risk and TCO, and how retiring workloads can remove HRIs."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Internal workload HRIs are reported to business stakeholders periodically",
+                            "helpfulResource": {
+                                "displayText": "Internal workload HRIs, risk status, and remediation progress is regularly surfaced to business stakeholders as part of internal management reporting."
+                            },
+                            "improvementPlan": {
+                                "displayText": "By leveraging Well-Architected reviews to measure best-practice alignment of your internal workloads, you can better prioritize and surface risk to your internal customers and stakeholders. Include HRI reporting as part of your regular internal management reporting to ensure that risk owners in your business have visibility of business risk associated with HRIs. The impact of an operational workload issue may extend beyond the cost of downtime - there may be financial penalties for missed SLAs or regulatory and compliance penalties depending on your industry and customers. Ensure your organization's financial stakeholders use insights from Well-Architected reviews of internal workloads to make data-driven decisions when allocating budget and time to make improvements."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Goals, metrics and KPIs are established for internal workloads",
+                            "helpfulResource": {
+                                "displayText": "Metrics and minimum acceptable HRIs are defined for internal workloads and operational processes."
+                            },
+                            "improvementPlan": {
+                                "displayText": "As part of your business governance, establish minimum acceptable standards and define critical issues for tooling and delivery processes. The range of critical issues will depend on specific domains relevant to your business and customers. Establish metrics and KPIs for business-critical systems in consultation with business stakeholders, internal customers, and workload owners. Agree on SLAs, and establish metrics and baselines to support them. Your internal operations teams should use Well-Architected reviews to structure a regular cadence with their internal customers as part of their operational reviews. Ongoing risk reduction and optimization must form part of the workload backlog. Preventative monitoring allows potential issues to be resolved early, before business outcomes are impacted."
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3 && choice_4 && choice_5",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "MEDIUM_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "HIGH_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "OPINT_02",
+                    "title": "Integration of internal systems with the AWS Well-Architected Tool",
+                    "description": "The AWS Well-Architected Tool's API allows partners to automate integration with a variety of third party ISV solutions for specific use-cases. It can be used to increase the fidelity and efficiency of customer workload discovery when conducting reviews, improve integration with a partner's ticketing system, or even provide automated monitoring and remediation to keep workloads aligned to best-practice with minimal intervention.",
+                    "helpfulResource": {
+                        "displayText": "Review AWS Well-Architected tool API reference.",
+                        "url": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/index.html"
+                    },
+                    
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Ticketing or workflow management tools are used",
+                            "helpfulResource": {
+                                "displayText": "Automation and tooling is used to track work items on projects to facilitate project and resource management."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Automation improves reliability of process execution. Teams can model their business-wide delivery processes with workflow management solutions and track the completion of backlog items without resorting to manual processes or reporting. Build a map of your delivery process and identify blockers due to manual or time-consuming processes. Consider how adopting simple mechanisms like a ticketing system could alleviate project management tracking and improve consistency. Start with lightweight tooling and processing to solve specific problems and iterate processes to build complexity."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Backlog items are manually created from Well-Architected reviews",
+                            "helpfulResource": {
+                                "displayText": "High-risk issue (HRI) remediations inform tickets, and project owners are guided by Well-Architected reviews and functional requirements when creating backlog items."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Remediation of HRIs is an important part of any project delivery. When running a Well-Architected review on a customer workload, the entirety of statement of work is likely to be HRI remediations, but when using Well-Architected reviews as part of governance of your delivery process, HRI remediations will need to form part of your backlog too. Ensure project owners have access to, and regularly consult, the Well-Architected review associated with their deliveries. Ensure that HRI remediations are not deprioritized in favour of the customer's functional requirements. HRIs and customer requirements must both be intentionally prioritized as part of the normal delivery process."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Backlog items are automatically created from Well-Architected reviews",
+                            "helpfulResource": {
+                                "displayText": "The Well-Architected Tool's API is used to integrate ticketing systems with Well-Architected reviews."
+                            },
+                            "improvementPlan": {
+                                "displayText": "When integrated with your internal ticketing system, it's possible to create tickets directly from Well-Architected reviews, reducing the complexity of exporting and importing workload information. This allows you to build automation to drive insights to stakeholders throughout your business. For example, you can then route tickets or summaries directly to your sales teams, allowing them to gain near-immediate visibility of risk to better inform their conversations with your customer, and identify further opportunities to add value. Consider how interactions with upstream and downstream teams can be automated and augmented with automated insights. Work with stakeholders to identify their needs and what value you can deliver with timely and relevant notifications. Identify opportunities to improve the customer experience with increased visibility and access to data. Find the AWS Well-Architected Tool API reference here: https://docs.aws.amazon.com/wellarchitected/latest/APIReference/index.html"
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Well-Architected tool integration is bi-directional",
+                            "helpfulResource": {
+                                "displayText": "Well-Architected reviews are updated in as a result of actions on automatically created workflow items."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Consider how Well-Architected reviews can be updated by your workflow. For example, a Well-Architected review can be used to create backlog items, and then closing a backlog HRI item updates the Well-Architected review. This bi-directional integration means that Well-Architected reviews can track the risk profile of a workload in near real-time as development proceeds. Consider how milestones can be created automatically from project phases or sprints to provide a measure of best practice alignment as the project progresses. Bi-directional integration helps keep reviews up to date and removes the necessity of manual update processes. Find the AWS Well-Architected Tool API reference here: https://docs.aws.amazon.com/wellarchitected/latest/APIReference/index.html"
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Third Party Well-Architected ISV tooling in use",
+                            "helpfulResource": {
+                                "displayText": "AWS Well-Architected ISV Partner solutions are used and integrated with the Well-Architected Tool to automate discovery."
+                            },
+                            "improvementPlan": {
+                                "displayText": "AWS Well-Architected ISV partners have built integrations with the AWS Well-Architected Tool to help accelerate the discovery process with automated best-practice checks. By leveraging integrated ISV tools, your consultants can save both their and your customer's time when running a review. They can spend more time diving deep on specific domains of concern to build a more accurate picture of a customer's workload than would be possible without tooling. Long-term integration with ISV tooling should be considered where there is the requirement to continuously monitor workloads for best-practice alignment. On workloads undergoing rapid development or evolution, the right solution in conjunction with appropriate guard-rails may help a workload maintain alignment through automated remediation. Learn more about AWS Well-Architected Solutions from AWS Partners here: https://aws.amazon.com/well-architected-tool/partners/"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "MEDIUM_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id": "OPINT_03",
+                    "title": "Convergent architectures for managed workloads",
+                    "description": "By establishing and maintaining best-practice patterns for customer workloads under management, MSP partners can work with customers to drive continuous alignment to best practice architectural patterns. This leads to workloads that converge to common best-practice patterns. Consistency of architecture allows for shared processes and automation across multiple workloads, with reduction in complexity and cost enabling scale.",
+                    "choices": [
+                        {
+                            "id": "choice_1",
+                            "title": "Managed workloads are subject to Well-Architected reviews",
+                            "helpfulResource": {
+                                "displayText": "MSP workloads have associated Well-Architected reviews as part of their management process. Best practice alignment is core to the MSP value proposition."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Best practice alignment is a key indicator of the cost to manage a customer environment. Workloads that are poorly aligned to Well-Architected principles will require more time and effort to manage, and frequent intervention by your managed services practice will be required to keep them running smoothly. This increases both the cost and risk to your business associated with the workload. When taking operational responsibility for a customer workload it's essential to understand the latent risks associated with the environment. All workloads under management require a Well-Architected review to surface latent risk and inform the operational backlog. Start by building a list of customer workloads, and prioritize by multiple dimensions. Consider customer industry and risk exposure, account complexity, and operational effort required to support the customer to date. Reducing the time and effort required to support a specific customer by remediating high-risk issues (HRIs) means you can more provide better coverage to your remaining customers. You can uncover new sources of value and opportunities to reduce risk for both you and your customers."
+                            }
+                        },
+                        {
+                            "id": "choice_2",
+                            "title": "Common architectural patterns are identified in managed workloads",
+                            "helpfulResource": {
+                                "displayText": "Commonalities between managed workloads are identified and catalogued."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Once you start running reviews across multiple workloads, you will begin to identify patterns. The patterns will either relate to the customer use-case or business domain, or the underlying architectural patterns that you deploy or manage on behalf of the customer. Look for commonality between your managed workloads, and identify similarities in use-cases and implementation. Perform a consolidated review of workload Well-Architected reviews to identify common risks, or improvements that can be made. Ensure that both the range of customer use-cases and the commonalities between workloads and domains is documented. Ensure you have domain expertise to support your customers and appropriate skills in your MSP practice with relevant AWS services, and build a plan to close gaps identified in your capabilities."
+                            }
+                        },
+                        {
+                            "id": "choice_3",
+                            "title": "Opportunistic efforts are made to align customer workload architectures",
+                            "helpfulResource": {
+                                "displayText": "Reactive or ad-hoc efforts are made to align customer workloads to common best-practice patterns."
+                            },
+                            "improvementPlan": {
+                                "displayText": "When remediating high-risk issues (HRIs) identified with Well-Architected reviews, you can start to align your customers to a common Well-Architected best practice architecture. There will be multiple cases where you have deployed identical or similar architectures and remediations for multiple customers. These may be either through necessity, such as Landing Zones, or as part of your domain expertise, for example a data pipeline solution. When you make improvements to a workload, there will be opportunities to make the same improvement to other workloads too. Work with customers to derive the most value from remediation efforts, and consider how lessons learned, and reference architecture patterns, can be applied to multiple customers."
+                            }
+                        },
+                        {
+                            "id": "choice_4",
+                            "title": "Processes are in place to intentionally align customer workload architectures",
+                            "helpfulResource": {
+                                "displayText": "The operational process of your MSP practice aligns customer workloads to a standard set of best-practice architectural patterns, supported by goal, metrics and KPIs."
+                            },
+                            "improvementPlan": {
+                                "displayText": "Using Well-Architected reviews helps you identify which improvements to prioritize, and provides you with the data to explain to customers why action should be taken. Your managed service practice should use Well-Architected reviews to structure a regular operational cadence with customers, with ongoing risk reduction and optimization forming part of the workload backlog. Establish processes to align customers to standard reference architectures, and create metrics to track alignment across your managed services practice, and goals to drive improvements. Proactive engagement can also uncover follow-on professional services opportunities. Cost reduction for customers can free resources to explore new, high-value projects. As a trusted delivery partner working to improve customer outcomes, your team is well-placed to engage."
+                            }
+                        },
+                        {
+                            "id": "choice_5",
+                            "title": "Workloads under management are maintained with extensive automation",
+                            "helpfulResource": {
+                                "displayText": "Manual processes are minimal, with the majority of operational processes automated."
+                            },
+                            "improvementPlan": {
+                                "displayText": "By working with customers to align workloads to standardized architectural patterns, costs of management are reduced through standardization. Consistency across your customer base allows you to increasingly leverage automation for common activities, enabling your team to manage more workloads through increased efficiencies, and scaling your practice profitably. Start by identifying common workload management tasks and activities that are repetitive, or overly complex and prone to error. Leverage AWS management and governance services and resources to automate your runbooks and playbooks. Review third-party ISV solutions that could help you automate billing, security, or other undifferentiated support activities. Consider how to evolve your operational processes to use services such as AWS Service Catalog to manage and deploy specific solutions for customers. Learn more about AWS management and governance services here: https://aws.amazon.com/products/management-and-governance/"
+                            }
+                        },
+                        {
+                            "id": "choice_no",
+                            "title": "None of these"
+                        }
+                    ],
+                    "riskRules": [
+                        {
+                            "condition": "!choice_no && choice_1 && choice_2 && choice_3",
+                            "risk": "NO_RISK"
+                        },
+                        {
+                            "condition": "default",
+                            "risk": "MEDIUM_RISK"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
